@@ -38,7 +38,7 @@ return (
           value.map((value,index)=>(
             <li key={index}>
               <span>{value}</span>
-              <button onClick={deleteValue}>Delete</button>
+              <button onClick={()=>deleteValue(index)}>Delete</button>
             </li>
           ))
         }
