@@ -1,29 +1,49 @@
 import React, { useState } from 'react'
 
 export const Todo = () => {
-    const [value,setValue] = useState([]);
-    // const [newValue,setNewValue] = useState(' ')
+  const [value,setValue] = useState([]);
+  const [newValue,setNewValue] = useState(' ')
 
-    const handleSubmit = ()=>{
-      alert('Entered task successfully')
+  const handleInputChange = (e)=>{
+    setNewValue(e.target.value)
+  }
+
+  const addValue = ()=>{
+    if(newValue.trim() !== ""){
+      setValue(v => [...value, newValue])
+      setNewValue(" ");
     }
-
-    const handleAdd = (e)=>{
-      setValue(e.targer.value)
+    else{
+      alert('Enter the Task...')
     }
+  }
 
+  const deleteValue = (index)=>{
+    const updateValue = value.filter((_, i)=> i !== index)
+    setValue(updateValue)
+  }
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-      <input type='text'/>
+return (
+  <div>
+    <input
+      type='text'
+      placeholder='Enter the task...'
+      value={newValue}
+      onChange={handleInputChange}/>
+
+      <button onClick={addValue}>Add</button>
+
       <ol>
-        {value.map(()=>{
-          <li></li>
-        })}
+        {
+          value.map((value,index)=>(
+            <li key={index}>
+              <span>{value}</span>
+              <button onClick={deleteValue}>Delete</button>
+            </li>
+          ))
+        }
       </ol>
-        <button type='submit' onChange={handleAdd}>Add</button>
-      </form>
-    </div>
-  )
+  </div>
+)
 }
+
