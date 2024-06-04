@@ -4,7 +4,7 @@ import { Todo } from './Todo';
 function App(){
   return (
     <div className="container">
-      <div className='add=wrapper'>
+      <div className='add-wrapper'>
         <Todo/>
       </div>
     </div>
