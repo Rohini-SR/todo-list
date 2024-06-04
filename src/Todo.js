@@ -24,7 +24,7 @@ export const Todo = () => {
   }
 
 return (
-  <div>
+  <div className='container'> 
     <input
       type='text'
       placeholder='Enter the task...'
