@@ -37,3 +37,60 @@
   border: 1px solid #c8966c;
   border-radius: 10px;
 }
+.button-add{
+  width: 70px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #f1af71;
+  cursor: pointer;
+}
+.list-item{
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid #c8966c;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 30px;
+}
+.button-complete,
+.button-delete,
+.button-edit{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.button-complete{
+  color: #ff6c6c;
+  margin-left: 10px;
+}
+.button-edit{
+  color: #e2d029;
+  margin-left: 10px;
+}
+.button-delete{
+  color: lightseagreen;
+}
+.complete{
+  text-decoration-style: solid;
+  text-decoration-line: line-through;
+  text-decoration-color: #ff6c6c;
+  opacity: 0.6;
+}
+.list{
+  width: 220px;
+  background-color: #12343b;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+input:focus,
+button:focus{
+  outline: none;
+}
